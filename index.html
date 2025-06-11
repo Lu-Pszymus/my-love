@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My love</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: auto;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: black;
+      }
+
+      #botton {
+        padding-top: 250px;
+      }
+
+      #btn {
+        background-color: #f8a8a5;
+        color: #941f1b;
+        border-radius: 25px;
+        width: 75px;
+        height: 50px;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      #showm {
+        display: none;
+      }
+
+      #show {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      p {
+        margin-left: 20px;
+        margin-right: 20px;
+        color: #ff423c;
+        font-size: 15px;
+        font-family: "Times New Roman", Times, serif;
+      }
+
+      .heart {
+        width: 100px;
+        height: 160px;
+        margin-top: 30px;
+        margin-right: 100px;
+
+        position: relative;
+
+        background-color: #910d09;
+
+        transform-origin: right bottom;
+
+        border-radius: 15px;
+
+        /*transition: 0.5s ease;*/
+        animation: heart 3s ease infinite alternate;
+      }
+
+      @keyframes heart {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(45deg);
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+        }
+        55% {
+          transform: rotate(45deg) scale(1);
+        }
+        60% {
+          transform: rotate(45deg) scale(1.2);
+        }
+        65% {
+          transform: rotate(45deg) scale(1);
+        }
+        70% {
+          transform: rotate(45deg) scale(1.2);
+        }
+        75% {
+          transform: rotate(45deg) scale(1);
+        }
+        80% {
+          transform: rotate(45deg) scale(1.2);
+        }
+        85% {
+          transform: rotate(45deg) scale(1);
+        }
+        90% {
+          transform: rotate(45deg) scale(1.2);
+        }
+        95% {
+          transform: rotate(45deg) scale(1);
+        }
+        100% {
+          transform: rotate(45deg) scale(1.2);
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+        }
+      }
+
+      /*.heart:hover {
+  transform: rotate(45deg);
+  transition: 0.5s ease;
+
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}*/
+
+      .heart:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+
+        border-radius: 15px;
+
+        transform-origin: left bottom;
+
+        background-color: #710c04;
+
+        position: absolute;
+        /*transition: 0.5s ease;*/
+        animation: heart_after 3s ease infinite alternate;
+      }
+
+      @keyframes heart_after {
+        0% {
+          transform: rotate(0deg);
+        }
+        50% {
+          transform: rotate(-90deg) translateY(100px);
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+        }
+        100% {
+          transform: rotate(-90deg) translateY(100px);
+          border-top-left-radius: 50px;
+          border-top-right-radius: 50px;
+        }
+      }
+
+      /*.heart:hover:after {
+  transform: rotate(-90deg) translateY(100px);
+  transition: 0.5s ease;
+
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}*/
+    </style>
+
+    <script>
+      function showcontent() {
+        document.getElementById("showm").style.display = "block";
+        document.getElementById("btn").style.display = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <div id="botton">
+      <button id="btn" onclick="showcontent()">Click Here &#10084;</button>
+    </div>
+
+    <div id="showm">
+      <div id="show">
+        <iframe
+          style="border-radius: 12px"
+          src="https://open.spotify.com/embed/track/5K3mMpiWtKvCplBl7ov4Q9?utm_source=generator"
+          width="100%"
+          height="100"
+          frameborder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
+        ></iframe>
+        <div class="heart"></div>
+        <p>&#10084;</p>
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                class="d-block w-60"
+                src="imgs/lulu.jpg"
+                alt="Primeiro Slide"
+                style="width: 60vw; height: auto"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-60"
+                src="imgs/lulu2.jpg"
+                alt="Segundo Slide"
+                style="width: 60vw; height: auto"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-60"
+                src="imgs/lulu3.jpg"
+                alt="Terceiro Slide"
+                style="width: 60vw; height: auto"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                class="d-block w-60"
+                src="imgs/lulu4.jpg"
+                alt="Terceiro Slide"
+                style="width: 60vw; height: auto"
+              />
+            </div>
+          </div>
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button"
+            data-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+          </a>
+        </div>
+        <p>&#10084;</p>
+        <p>
+          O único lugar que eu chamo de lar (é você)<br />
+          <small> only place I call home (you are)</small><br /><br />
+
+          Cada esperança e sonho que eu já tive (é você)<br />
+          <small>Every hope and dream I've ever had (you are)</small
+          ><br /><br />
+
+          Em outras vidas, sem nenhuma dúvida<br />
+          <small>In other lifetimes, without any doubt</small><br /><br />
+
+          Eu continuarei escolhendo você<br />
+          <small>I'll keep choosing you</small><br /><br />
+
+          Como uma brisa fresca em um dia de verão (é você)<br />
+          <small>Like a cool breeze on a summer day (you are)</small
+          ><br /><br />
+
+          Como a estrela mais brilhante no céu (meu bem, você brilha)<br />
+          <small>Like a brightest star up in the sky (my dear, you shine)</small
+          ><br /><br />
+
+          Continua me fazendo querer mais<br />
+          <small>Keep making me wanting more</small><br /><br />
+
+          Meu bem, você é o que eu estou procurando<br />
+          <small>Girl, you are what I am looking for</small><br /><br />
+
+          Eu te amo (te amo, ah)<br />
+          <small>I love you (love you, oh)</small><br /><br />
+
+          Eu te amo em todos os universos (universos)<br />
+          <small>I love you in every universe (universe)</small><br /><br />
+        </p>
+        <p>&#10084;&#10084;&#10084;</p>
+      </div>
+    </div>
+  </body>
+</html>
